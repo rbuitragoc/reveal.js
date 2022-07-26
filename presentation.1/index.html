@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js</title>
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/solarized.css" id="theme">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="none">
+
+					<img style="vertical-align: bottom;" src="img/Logo EYP.png"/>
+					<div class="r-stack">
+						<h2 class="fragment fade-in-then-out">Bilingüe</h2>
+						<h2 class="fragment fade-in">Bilingual</h1>
+					</div>
+
+					<h3 class="fragment fade-in">Assessments</h3>
+				</section>
+				<section data-transition="none">
+					<h2>Objetivo General</h2>
+					<p>Establecer un punto de partida individual para diseñar un adecuado plan de aprendizaje / mejoramiento del inglés.</p>
+				</section>
+
+				<section data-transition="concave">
+					<h2>Objetivos Específicos</h2>
+					<p>
+						<ol>
+							<li>Establecer el nivel actual de inglés individual</li>
+							<li>Establecer las preferencias y tendencias individuales de aprendizaje y comunicativas</li>
+						</ol>
+					</p>
+				</section>
+
+				<section data-transition="zoom">
+					<h2>English Level Assessment</h2>
+					<p>Test online de conocimientos y uso del inglés.</p>
+				</section>
+
+				<section data-transition="zoom-in fade-out">
+					<img src="img/values1.png"/>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<img src="img/values2.png"/>
+				</section>
+
+				<section data-transition="convex-in fade-out">
+					<h2>Learning Assessment</h2>
+					<img src="img/avioncito.png"/>
+					<p>Test online de tendencias de aprendizaje, inteligencias y preferencias comunicativas</p>
+				</section>
+
+				<section data-transition="convex-in concave-out">
+					<h3>¡Gracias!</h3>
+					<p>... y bienvenidas(os) a esta aventura</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/zoom/zoom.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/search/search.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				controls: true,
+				progress: true,
+				center: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				multiplex: {
+					// Example values. To generate your own, see the socket.io server instructions.
+					secret: '1658803661233122579', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+					id: '7f47d6ba2131a08b', // Obtained from socket.io server
+					url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+				},
+
+				// Don't forget to add the dependencies
+				dependencies: [
+					{ src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+					{ src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+					{ src: 'https://reveal-multiplex.glitch.me/client.js', async: true },
+				],
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ],
+			});
+		</script>
+	</body>
+</html>
