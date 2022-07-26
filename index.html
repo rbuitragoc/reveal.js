@@ -78,7 +78,20 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				multiplex: {
+					// Example values. To generate your own, see the socket.io server instructions.
+					secret: '1658803661233122579', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+					id: '7f47d6ba2131a08b', // Obtained from socket.io server
+					url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+				},
+
+				// Don't forget to add the dependencies
+				dependencies: [
+					{ src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+					{ src: 'https://reveal-multiplex.glitch.me/master.js', async: true },
+					{ src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+				]
 			});
 		</script>
 	</body>
